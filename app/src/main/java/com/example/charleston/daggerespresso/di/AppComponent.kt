@@ -1,6 +1,7 @@
 package com.example.charleston.daggerespresso.di
 
 import android.app.Application
+import com.example.charleston.daggerespresso.App
 import com.example.charleston.daggerespresso.di.modules.*
 import com.example.charleston.daggerespresso.features.MainActivity
 import com.example.charleston.daggerespresso.features.MainPresenter
@@ -25,6 +26,7 @@ import javax.inject.Singleton
 )
 interface AppComponent {
 
+    fun inject(app: App)
     fun inject(mainActivity: MainActivity)
     fun inject(mainPresenter: MainPresenter)
 
