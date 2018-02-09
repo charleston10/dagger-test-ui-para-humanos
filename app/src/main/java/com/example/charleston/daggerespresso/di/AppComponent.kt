@@ -1,9 +1,9 @@
 package com.example.charleston.daggerespresso.di
 
 import android.app.Application
+import com.example.charleston.daggerespresso.di.modules.*
 import com.example.charleston.daggerespresso.features.MainActivity
-import com.example.charleston.daggerespresso.di.modules.AppModule
-import com.example.charleston.daggerespresso.di.modules.NetworkModule
+import com.example.charleston.daggerespresso.features.MainPresenter
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -17,12 +17,16 @@ import javax.inject.Singleton
         modules = arrayOf(
                 AndroidInjectionModule::class,
                 AppModule::class,
-                NetworkModule::class
+                NetworkModule::class,
+                WorkerModule::class,
+                RequestModule::class,
+                PresenterModule::class
         )
 )
 interface AppComponent {
 
     fun inject(mainActivity: MainActivity)
+    fun inject(mainPresenter: MainPresenter)
 
     @Component.Builder
     interface Builder {

@@ -22,7 +22,7 @@ open class NetworkModule {
     @Singleton
     @Named("urlDomain")
     open fun provideUrlDomain(): String {
-        return "jsonplaceholder.typicode.com"
+        return "http://jsonplaceholder.typicode.com"
     }
 
     @Provides

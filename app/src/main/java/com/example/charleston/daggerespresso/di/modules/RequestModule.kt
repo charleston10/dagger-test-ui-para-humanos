@@ -1,21 +1,21 @@
 package com.example.charleston.daggerespresso.di.modules
 
 import com.example.charleston.daggerespresso.api.requests.PostRequest
-import com.example.charleston.daggerespresso.api.workers.PostWorker
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
+import retrofit2.Retrofit
 
 /**
  * Created by charleston on 09/02/18.
  */
 
 @Module
-class WorkerModule {
+class RequestModule {
 
     @Provides
     @Reusable
-    fun providePostWorker(request: PostRequest): PostWorker {
-        return PostWorker(request)
+    fun provideAuthRequest(retrofit: Retrofit): PostRequest {
+        return retrofit.create(PostRequest::class.java)
     }
 }

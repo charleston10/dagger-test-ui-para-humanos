@@ -1,7 +1,7 @@
 package com.example.charleston.daggerespresso.di.modules
 
-import com.example.charleston.daggerespresso.api.requests.PostRequest
 import com.example.charleston.daggerespresso.api.workers.PostWorker
+import com.example.charleston.daggerespresso.features.MainPresenter
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -9,13 +9,12 @@ import dagger.Reusable
 /**
  * Created by charleston on 09/02/18.
  */
-
 @Module
-class WorkerModule {
+class PresenterModule {
 
     @Provides
     @Reusable
-    fun providePostWorker(request: PostRequest): PostWorker {
-        return PostWorker(request)
+    fun provideMainPresenter(worker: PostWorker): MainPresenter {
+        return MainPresenter(worker)
     }
 }
