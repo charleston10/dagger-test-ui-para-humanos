@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.charleston.daggerespresso.MainActivity">
+    tools:context="com.example.charleston.daggerespresso.features.MainActivity">
 
     <TextView
         android:id="@+id/main_txt_message"
