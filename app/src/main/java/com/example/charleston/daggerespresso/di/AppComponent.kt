@@ -1,7 +1,7 @@
 package com.example.charleston.daggerespresso.di
 
 import android.app.Application
-import com.example.charleston.daggerespresso.MainActivity
+import com.example.charleston.daggerespresso.features.MainActivity
 import com.example.charleston.daggerespresso.di.modules.AppModule
 import com.example.charleston.daggerespresso.di.modules.NetworkModule
 import dagger.BindsInstance
