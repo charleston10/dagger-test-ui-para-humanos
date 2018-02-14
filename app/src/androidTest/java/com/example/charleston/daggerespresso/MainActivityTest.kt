@@ -3,16 +3,14 @@ package com.example.charleston.daggerespresso
 import android.support.test.rule.ActivityTestRule
 import com.example.charleston.daggerespresso.di.modules.NetworkModule
 import com.example.charleston.daggerespresso.features.MainActivity
-import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.whenever
+import it.cosenonjaviste.daggermock.InjectFromComponent
+import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import okhttp3.mockwebserver.MockResponse
-import org.bouncycastle.crypto.tls.ConnectionEnd.server
-
 
 
 /**
@@ -21,12 +19,13 @@ import org.bouncycastle.crypto.tls.ConnectionEnd.server
 class MainActivityTest {
 
     @get:Rule
-    val rule = espressoDaggerMockRule()
+    val daggerRule = espressoDaggerMockRule()
 
     @get:Rule
     val activityRule = ActivityTestRule(MainActivity::class.java, false, false)
 
-    val networkModule: NetworkModule = mock()
+    @InjectFromComponent
+    lateinit var networkService: NetworkModule
 
     val server = MockWebServer()
 
@@ -37,15 +36,16 @@ class MainActivityTest {
 
     @Test
     fun testOnCreate() {
-        server.enqueue(MockResponse().setBody("hello, world!"))
-
-        whenever(networkModule.provideUrlDomain()).thenReturn("/")
-
         activityRule.launchActivity(null)
+
+        Thread.sleep(1000)
+
+        server.enqueue(MockResponse().setBody("hello, world!"))
+        whenever(networkService.provideUrlDomain()).thenReturn("/")
     }
 
     @After
-    fun finish() {
+    fun tearDown() {
         server.shutdown()
     }
 }

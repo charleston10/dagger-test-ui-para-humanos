@@ -11,7 +11,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.charleston.daggerespresso.TestAppRunner"
     }
     buildTypes {
         release {
@@ -64,6 +64,11 @@ dependencies {
         exclude group: 'org.jetbrains.kotlin'
     }
     androidTestImplementation "com.squareup.okhttp3:mockwebserver:$okHttp3"
+    androidTestImplementation "com.google.dagger:dagger:$daggerVersion"
+    androidTestImplementation "com.google.dagger:dagger-android:$daggerVersion"
+    androidTestImplementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$daggerVersion"
+    kaptAndroidTest "com.google.dagger:dagger-android-processor:$daggerVersion"
 }
 
 kapt {
