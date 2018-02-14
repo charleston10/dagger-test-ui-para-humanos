@@ -18,10 +18,10 @@ import javax.inject.Singleton
         modules = arrayOf(
                 AndroidInjectionModule::class,
                 AppModule::class,
-                NetworkModule::class,
                 WorkerModule::class,
                 RequestModule::class,
-                PresenterModule::class
+                PresenterModule::class,
+                NetworkModule::class
         )
 )
 interface AppComponent {
@@ -35,6 +35,7 @@ interface AppComponent {
         @BindsInstance
         fun application(application: Application): Builder
 
+        fun networkModule(networkModule: NetworkModule): Builder
         fun appModule(appModule: AppModule): Builder
         fun build(): AppComponent
     }
