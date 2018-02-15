@@ -18,4 +18,4 @@ DaggerMock - https://github.com/fabioCollini/DaggerMock
 
 Espresso - https://developer.android.com/training/testing/espresso/index.html
 
-MockWebServe - https://github.com/square/okhttp/tree/master/mockwebserver
+MockWebServer - https://github.com/square/okhttp/tree/master/mockwebserver
