@@ -6,6 +6,10 @@ Teste simples, para reproduzir um cenário da vida real a lá Lindsay Lohan com 
 
 <img src="https://media.giphy.com/media/tHe1Yj4WkIw5G/giphy.gif"/>
 
+## API ##
+
+Fake Online REST API for Testing and Prototyping - https://jsonplaceholder.typicode.com/
+
 ## Arquitetura ##
 
 MVP (Model View Presenter) - https://github.com/googlesamples/android-architecture
