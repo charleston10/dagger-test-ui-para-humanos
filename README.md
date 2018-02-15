@@ -4,6 +4,10 @@ Projeto feito para humanos que desejam realizar testes de UI com Dagger
 
 Teste simples, para reproduzir um cenário da vida real
 
+## Arquitetura ##
+
+MVP (Model View Presenter) - https://github.com/googlesamples/android-architecture
+
 ## Bibliotecas utilizadas ##
 
 Retrofit - http://square.github.io/retrofit/
