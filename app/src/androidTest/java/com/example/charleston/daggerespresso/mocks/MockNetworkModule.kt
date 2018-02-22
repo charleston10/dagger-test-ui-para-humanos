@@ -1,4 +1,4 @@
-package com.example.charleston.daggerespresso
+package com.example.charleston.daggerespresso.mocks
 
 import com.example.charleston.daggerespresso.di.modules.NetworkModule
 

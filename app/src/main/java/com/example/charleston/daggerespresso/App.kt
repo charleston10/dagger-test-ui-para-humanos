@@ -17,7 +17,7 @@ import javax.inject.Inject
 /**
  * Created by charleston on 09/02/18.
  */
-class App : Application(), HasActivityInjector {
+open class App : Application(), HasActivityInjector {
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
@@ -33,7 +33,7 @@ class App : Application(), HasActivityInjector {
         component.inject(this)
     }
 
-    fun createComponent(): AppComponent {
+    open fun createComponent(): AppComponent {
         return DaggerAppComponent
                 .builder()
                 .application(this)
