@@ -1,7 +1,7 @@
 package com.example.charleston.daggerespresso.di.modules
 
 import com.example.charleston.daggerespresso.api.requests.PostRequest
-import com.example.charleston.daggerespresso.api.workers.PostWorker
+import com.example.charleston.daggerespresso.api.services.PostService
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -11,11 +11,11 @@ import dagger.Reusable
  */
 
 @Module
-class WorkerModule {
+class ServiceModule {
 
     @Provides
     @Reusable
-    fun providePostWorker(request: PostRequest): PostWorker {
-        return PostWorker(request)
+    fun providePostService(request: PostRequest): PostService {
+        return PostService(request)
     }
 }

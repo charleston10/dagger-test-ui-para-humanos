@@ -17,24 +17,20 @@ import javax.inject.Inject
 /**
  * Created by charleston on 09/02/18.
  */
-class App : Application(), HasActivityInjector, HasServiceInjector {
+class App : Application(), HasActivityInjector {
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
-
-    @Inject
-    lateinit var dispatchingAndroidInjectorService: DispatchingAndroidInjector<Service>
 
     @set:VisibleForTesting
     lateinit var component: AppComponent
 
     override fun activityInjector(): AndroidInjector<Activity> = dispatchingAndroidInjector
 
-    override fun serviceInjector(): AndroidInjector<Service> = dispatchingAndroidInjectorService
-
     override fun onCreate() {
         super.onCreate()
         component = createComponent()
+        component.inject(this)
     }
 
     fun createComponent(): AppComponent {
