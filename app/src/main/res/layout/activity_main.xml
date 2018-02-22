@@ -3,24 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="4dp"
+    android:paddingTop="4dp"
     tools:context="com.example.charleston.daggerespresso.features.MainActivity">
 
     <TextView
         android:id="@+id/main_txt_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:text="Hello World!" />
 
-    <Button
-        android:id="@+id/main_btn_request"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_txt_message"
-        android:layout_centerHorizontal="true"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_rv_posts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_txt_message"
         android:layout_marginTop="4dp"
-        android:text="Request"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="266dp" />
-
+        tools:background="@color/colorAccent" />
 </RelativeLayout>
