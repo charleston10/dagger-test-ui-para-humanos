@@ -9,7 +9,6 @@ import android.widget.Toast
 import com.example.charleston.daggerespresso.R
 import com.example.charleston.daggerespresso.data.PostData
 import com.example.charleston.daggerespresso.features.adapters.PostsAdapter
-import dagger.android.AndroidInjection
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -21,9 +20,9 @@ class MainActivity : AppCompatActivity(), MainView {
     private val list by lazy { findViewById<RecyclerView>(R.id.main_rv_posts) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         presenter.callPosts()
     }
 

@@ -6,7 +6,6 @@ import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.support.test.rule.ActivityTestRule
 import com.example.charleston.daggerespresso.extensions.getJson
 import com.example.charleston.daggerespresso.features.MainActivity
-import com.example.charleston.daggerespresso.mocks.MockServerDispatcher
 import com.example.charleston.daggerespresso.viewActions.RecyclerViewItemCountAssertion
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
