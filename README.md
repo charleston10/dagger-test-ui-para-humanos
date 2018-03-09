@@ -20,8 +20,6 @@ Retrofit - http://square.github.io/retrofit/
 
 DaggerAndroid - https://google.github.io/dagger/android.html
 
-DaggerMock - https://github.com/fabioCollini/DaggerMock
-
 Espresso - https://developer.android.com/training/testing/espresso/index.html
 
 MockWebServer - https://github.com/square/okhttp/tree/master/mockwebserver
