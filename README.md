@@ -2,7 +2,7 @@
 
 Projeto feito para humanos que desejam realizar testes de UI com Dagger
 
-Teste simples, para reproduzir um cenário da vida real a lá Lindsay Lohan com aquele código, lindo, bunito e bem feito :)
+Teste simples, para reproduzir um cenário da vida real
 
 <img src="https://media.giphy.com/media/tHe1Yj4WkIw5G/giphy.gif"/>
 
